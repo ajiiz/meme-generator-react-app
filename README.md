@@ -1,3 +1,7 @@
+## Meme Generator
+
+Simple React App made for testing purposes.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
