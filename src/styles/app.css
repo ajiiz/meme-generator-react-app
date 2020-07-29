@@ -7,11 +7,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-body header {
-  display: flex;
-  border-bottom: solid black 1px;
-  justify-content: center;
-  align-items: center;
-  height: 15vh;
-}
