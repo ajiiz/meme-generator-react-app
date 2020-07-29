@@ -30,6 +30,24 @@ class MemeGenerator extends Component {
     render(){
         return (
             <div>
+                <form>
+                    <input
+                        type="text"
+                        placeholder="top text"
+                        name="topText"
+                        value={this.state.topText}
+                        onChange={this.handleChange}
+                    /><br />
+                    <input
+                        type="text"
+                        placeholder="bottom text"
+                        name="bottomText"
+                        value={this.state.bottomText}
+                        onChange={this.handleChange}
+                    />
+                </form>
+                <p>Top Text: {this.state.topText}</p>
+                <p>Bottom Text: {this.state.bottomText}</p>
             </div>
         )
     }
