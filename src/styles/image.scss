@@ -4,7 +4,7 @@
     position: relative;
     text-align: center;
     color: white;
-    font-size: 2em;
+    font-size: 1.7em;
     text-shadow:
         3px 3px 0 #000,
         -1px -1px 0 #000,
@@ -20,14 +20,14 @@
 
     .topCenter {
         position: absolute;
-        top: 20%;
+        top: 15%;
         left: 50%;
         text-transform: uppercase;
         transform: translate(-50%, -50%);
       }
       .bottomCenter {
         position: absolute;
-        top: 80%;
+        top: 85%;
         left: 50%;
         text-transform: uppercase;
         transform: translate(-50%, -50%);
