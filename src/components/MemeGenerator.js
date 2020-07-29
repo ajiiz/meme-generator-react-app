@@ -29,7 +29,13 @@ class MemeGenerator extends Component {
         })
     }
     handleClick() {
-        console.log("clicked")
+        const length = this.state.allMemeImgs.length
+        const randomNumber = Math.floor(Math.random() * length)
+        const randomImageUrl = this.state.allMemeImgs[randomNumber].url
+        console.log(randomNumber)
+        this.setState({
+            randomImage: randomImageUrl
+        })
     }
     render(){
         return (
