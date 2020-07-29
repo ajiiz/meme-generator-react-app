@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import Form from './Form'
 
 class MemeGenerator extends Component {
     constructor() {
@@ -10,7 +11,7 @@ class MemeGenerator extends Component {
             allMemeImgs: []
         }
         this.handleChange = this.handleChange.bind(this)
-        this.handleClick = this.handleClick.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
     componentDidMount() {
         fetch("https://api.imgflip.com/get_memes")
@@ -28,7 +29,8 @@ class MemeGenerator extends Component {
             [name]: value
         })
     }
-    handleClick() {
+    handleSubmit(event) {
+        event.preventDefault()
         const length = this.state.allMemeImgs.length
         const randomNumber = Math.floor(Math.random() * length)
         const randomImageUrl = this.state.allMemeImgs[randomNumber].url
@@ -39,30 +41,11 @@ class MemeGenerator extends Component {
     }
     render(){
         return (
-            <div>
-                <form>
-                    <input
-                        type="text"
-                        placeholder="top text"
-                        name="topText"
-                        value={this.state.topText}
-                        onChange={this.handleChange}
-                    /><br />
-                    <input
-                        type="text"
-                        placeholder="bottom text"
-                        name="bottomText"
-                        value={this.state.bottomText}
-                        onChange={this.handleChange}
-                    />
-                </form>
-                <button onClick={this.handleClick}>Generate</button>
-                <div>
-                    <img src={this.state.randomImage} alt="" />
-                    <h2>{this.state.topText}</h2>
-                    <h2>{this.state.bottomText}</h2>
-                </div>
-            </div>
+            <Form
+                data={this.state}
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+            />
         )
     }
 }
