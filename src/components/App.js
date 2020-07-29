@@ -5,7 +5,7 @@ import "../styles/app.css"
 
 const App = () => {
     return (
-        <div>
+        <div className="main_container">
             <Header />
             <MemeGenerator />
         </div>

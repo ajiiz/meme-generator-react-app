@@ -2,5 +2,17 @@
 
 body {
     font-family: 'Orbitron', sans-serif;
-    height:100%;
+    background-color:#ffff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    header {
+        display:flex;
+        border-bottom: solid black 1px;
+        justify-content: center;
+        align-items: center;
+        height:15vh;
+    }
 }

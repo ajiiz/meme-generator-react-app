@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 body {
   font-family: 'Orbitron', sans-serif;
+  background-color: #ffff;
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body header {
+  display: flex;
+  border-bottom: solid black 1px;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
 }

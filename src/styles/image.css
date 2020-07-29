@@ -1,0 +1,30 @@
+.image_container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.image_container img {
+  width: 568px;
+  height: 335px;
+}
+
+.image_container .topCenter {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}
+
+.image_container .bottomCenter {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}

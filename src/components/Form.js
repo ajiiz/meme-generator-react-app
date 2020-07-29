@@ -1,4 +1,6 @@
 import React from 'react'
+import "../styles/form.css"
+import "../styles/image.css"
 
 const Form = (props) => {
     return (
@@ -10,20 +12,22 @@ const Form = (props) => {
                     name="topText"
                     value={props.data.topText}
                     onChange={props.handleChange}
-                /><br />
+                    maxlength="25"
+                />
                 <input
                     type="text"
                     placeholder="bottom text"
                     name="bottomText"
                     value={props.data.bottomText}
                     onChange={props.handleChange}
+                    maxlength="25"
                 />
                 <button>Generate</button>
             </form>
-            <div>
+            <div className="image_container">
                 <img src={props.data.randomImage} alt="" />
-                <h2>{props.data.topText}</h2>
-                <h2>{props.data.bottomText}</h2>
+                <div className="topCenter">{props.data.topText}</div>
+                <div className="bottomCenter">{props.data.bottomText}</div>
             </div>
         </div>
     )
